@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Додавання AR.js до програми</title>
+		<script src="../aframe/aframe.min.js"></script>
+		<script src="../arjs/aframe-ar.js"></script>
+	</head>
+	<body>
+		<a-scene embedded arjs>
+			<a-marker preset="hiro">
+<!--
+				<a-torus position="-0.33 -0.83 -0.16" color="green" radius="0.2"
+					animation="property: components.material.material.color;
+		type: color; from: green; to: red; loop: true; dur: 10000"></a-torus>
+				<a-plane width="1.16" height="1.6" rotation="-55 0 0" position="-0.33 -0.83 +0.33" color="white"
+						src="https://i.imgur.com/R6DKElM.png" 
+						transparent="true"
+						></a-plane>
+				<a-cylinder color="yellow" height="0.33" radius="0.01" position="-0.33 -0.83 +0.16"
+					animation="property: position; from: -0.33 -0.83 +0.16; to: -0.33 -0.83 -0.66; loop: false; dur: 6000"></a-cylinder>
+				<a-cylinder color="blue" height="0.33" radius="0.01" position="-0.5 -0.83 +0.16"
+					animation="property: scale; to: 10 1 1; loop: true; dur: 12000"></a-cylinder>		
+				<a-torus-knot color="orange" radius="0.2" position="-0.5 -0.83 -0.16"
+					animation="property: rotation; to: 0 0 360; loop: true; dur: 10000"></a-torus-knot>
+				<a-plane width="1.5" height="0.33" position="0.5 -1.5 -0.16 "></a-plane>
+				<a-text value="Вітаємо у браузерній VR!" color="black" width="1.66" position="-0.1 -1 -0.16"
+					font="tahoma-msdf.json" negate="false"
+					animation="property: rotation; to: 360 360 360; loop: true; dur: 10000"></a-text>			
+-->
+				<a-torus position="-0.4 0.2 -1" color="green" radius="1.2" scale="0.2 0.2 0.2"
+					animation="property: components.material.material.color;
+		type: color; from: green; to: red; loop: true; dur: 10000"></a-torus>
+				<a-plane width="7" height="7" rotation="-55 0 0" position="-0.4 -0.4 -1" color="white"
+						src="https://i.imgur.com/R6DKElM.png" 
+						transparent="true" scale="0.2 0.2 0.2"
+						></a-plane>
+				<a-cylinder color="yellow" height="2" radius="0.05" position="-0.4 -0.2 -1" scale="0.2 0.2 0.2"
+					animation="property: position; from: -0.4 -0.2 -1; to: -0.4 0.8 -1; loop: false; dur: 6000"></a-cylinder>
+				<a-cylinder color="blue" height="2" radius="0.05" position="-0.6 -0.2 -1" scale="0.2 0.2 0.2"
+					animation="property: scale; to: 10 1 1; loop: true; dur: 12000"></a-cylinder>		
+				<a-torus-knot color="orange" radius="1.2" position="-0.6 0.2 -1" scale="0.2 0.2 0.2"
+					animation="property: rotation; to: 0 0 360; loop: true; dur: 10000"></a-torus-knot>
+				<a-plane width="9" height="2" position="0.6 0.2 -1.8" scale="0.2 0.2 0.2"></a-plane>
+				<a-text value="Вітаємо у браузерній VR!" color="black" width="10" position="-0.1 0.2 -1.2"
+					font="tahoma-msdf.json" negate="false" scale="0.2 0.2 0.2"
+					animation="property: rotation; to: 360 360 360; loop: true; dur: 10000"></a-text>
+
+			</a-marker>
+			<a-entity camera></a-entity>
+		</a-scene>
+	</body>
+</html>
+
+<!-- 
+	центр маркера - 0 0 (0)
+	края маркера: (-0.5 0.5), (0.5 0.5), (-0.5 -0.5), (-0.5 0.5)
+	края сцени: мін(х) = -3, max(x) = +3, min(y) = -2 [-3], max(y) = 1 [+3]
+	масштаб: 1 : 6
+--->
