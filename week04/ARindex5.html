@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<script src="../aframe/aframe.min.js"></script>
+		<script src="../arjs/aframe-ar.js"></script>
+		<script>
+			var counter = 1;
+			
+			AFRAME.registerComponent('hello', {
+				init: function () {
+					console.log('Hello, World! ', counter++);
+					console.log(this);
+				},
+				schema: {
+					arrayProperty: {type: 'array', default: []},
+					integerProperty: {type: 'int', default: 5}
+				}
+			});
+		</script>
+		<script src="registerevents.js"></script>
+	</head>
+	<body>
+		<a-scene embedded arjs>
+			<a-marker preset="hiro" hello="integerProperty: 17;" registerevents id="Hiro">
+				<a-sphere color="green" radius=0.5></a-sphere>
+			</a-marker>
+
+			<a-marker preset="kanji" registerevents id="Kanji">
+				<a-box color="blue" hello="arrayProperty: 1,2,3"></a-box>
+			</a-marker>
+
+			<a-marker type='pattern' url='../assets/pattern-i_image.patt' registerevents id="i ()">
+				<a-box color="black"></a-box>
+			</a-marker>
+
+			<a-marker type='pattern' url='../assets/pattern-letterA.patt' registerevents id="A">
+				<a-sphere color="white" radius=0.5></a-box>
+			</a-marker>
+
+			<a-marker type='pattern' url='../assets/pattern-letterB.patt' registerevents id="B">
+				<a-sphere color="black" radius=0.5></a-box>
+			</a-marker>
+
+			<a-marker type='pattern' url='../assets/pattern-letterC.patt' registerevents id="C">
+				<a-sphere color="red" radius=0.5></a-box>
+			</a-marker>
+
+			<a-marker type='pattern' url='../assets/pattern-letterD.patt' registerevents id="D">
+				<a-sphere color="yellow" radius=0.5></a-box>
+			</a-marker>
+
+			<a-marker type='pattern' url='../assets/pattern-letterF.patt' registerevents id="F">
+				<a-sphere color="green" radius=0.5></a-box>
+			</a-marker>
+
+			<a-marker type='pattern' url='../assets/pattern-letterG.patt' registerevents id="G">
+				<a-sphere color="blue" radius=0.5></a-box>
+			</a-marker>
+
+			<a-marker type='pattern' url='../assets/pattern-db.patt' registerevents  id="Д,Б!">
+				<a-sphere color="magenta" radius=0.75></a-box>
+			</a-marker>
+
+			<a-entity hello></a-entity>
+
+			<a-entity camera></a-entity>
+		</a-scene>
+	</body>
+</html>
