@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>З'єднання маркерів лінією</title>
+	    	<script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+		<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+    		<script src="Triangle.js"></script>
+	</head>
+    	<body>
+        	<a-scene embedded arjs>
+			<a-marker type="pattern" url="https://raw.githubusercontent.com/DonetskyiIllia/donetskyiIllia.github.io/main/Assets/pattern-letterA.patt" registerevents id="A">
+				<a-sphere color="red" radius="0.10"></a-sphere>
+				<a-entity id="lineAB"></a-entity>
+			</a-marker>
+			<a-marker type="pattern" url="https://raw.githubusercontent.com/DonetskyiIllia/donetskyiIllia.github.io/main/Assets/pattern-letterB.patt" registerevents id="B">
+				<a-sphere color="red" radius="0.10"></a-sphere>
+				<a-entity id="lineBC"></a-entity>
+			</a-marker>
+			<a-marker type="pattern" url="https://raw.githubusercontent.com/DonetskyiIllia/donetskyiIllia.github.io/main/Assets/pattern-letterC.patt" registerevents id="C">
+				<a-sphere color="red" radius="0.10"></a-sphere>
+				<a-entity id="lineCA"></a-entity>
+			</a-marker>
+			<a-entity camera></a-entity>
+			<a-entity run></a-entity>
+        	</a-scene>
+	</body>
+</html>
