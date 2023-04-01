@@ -32,15 +32,21 @@ scene.add( light3 );
 
 camera.position.z = 3;
 
+const progress = document.getElementById("progress");
+
+
 const loader = new GLTFLoader();
 
 loader.load( '../assets/free_merc_hovercar.glb', function ( car ) {
+	console.log(car);
 	scene.add( car.scene );
-//	car.scale.set(3, 3, 3);
-//	car.rotation.set(0, -Math.PI/2, 0);
+	car.scene.scale.set(3, 3, 3);
+	car.scene.rotation.set(0, -Math.PI/2, 0);
 
 }, function ( xhr ) {
-	console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' );
+	progress.innerHTML = ( xhr.loaded / xhr.total * 100 ) + '% loaded' ;
+	if (xhr.loaded == xhr.total)
+		progress.innerHTML = "";
 }, function ( error ) {
 	console.error( error );
 } );

@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="../aframe/aframe.min.js"></script>
+		<script src="../arjs/aframe-ar-nft.js"></script>
+		<link rel="stylesheet" href="styles.css">
+		<script src="model_nft.js"></script>
+	</head>
+
+	<body style="margin : 0px; overflow: hidden;">
+  		<div class="arjs-loader">
+    			<div>Зачекайте, йде завантаження...</div>
+  		</div>
+		<a-scene vr-mode-ui="enabled: false;"
+		    renderer="logarithmicDepthBuffer: true;"
+		    embedded
+		    arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;" >
+			<a-nft type="nft" url="/assets/face" emitevents registerevents>
+				<a-sphere color="red" radius="50"></a-sphere>
+			</a-nft>
+			<a-nft type="nft" url="/assets/petrykivka" emitevents registerevents>
+				<a-sphere color="green" radius="50"></a-sphere>
+			</a-nft>
+			<a-nft type="nft" url="/assets/carnival" emitevents registerevents>
+				<!--<a-sphere color="blue" radius="50"></a-sphere>-->
+				<a-gltf-model src="/assets/free_merc_hovercar.glb" scale="100 100 100" rotation="90 0 0" position="50 150 20"></a-gltf-model>
+			</a-nft>
+			<a-entity camera></a-entity>
+		</a-scene>
+	</body>
+<html>
+
