@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Заголовок вікна</title>
+		<style>
+			body { margin: 0; }
+			button#start {
+				top: 50%;
+				left: 50%;
+				position: absolute;
+				transform: translateX(-50%);
+				transform: scale(3, 3);
+			}
+		</style>
+		<script type="module" src="2nd.js"></script>
+	</head>
+	<body>
+		<video id="videoQ" hidden loop playsinline muted>
+			<source src="/assets/Q_without_powers.mkv">
+		</video>
+		<video id="videoToby" style="display:none" loop playsinline muted>
+			<source src="/assets/Toby_First_Mission.mkv">
+		</video>
+		<button id="start">Натисни на кнопку для початку програми</button>
+	</body>
+</html>
+
