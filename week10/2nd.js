@@ -107,14 +107,14 @@ function start()
 
 	const loader = new THREE.TextureLoader();
 
-	const texture = loader.load( '/assets/petrykivka.png' );
+	const texture = loader.load( '../assets/petrykivka.png' );
 
-	material[0].map = loader.load( '/assets/cube1.png' );
-	material[1].map = loader.load( '/assets/cube2.png' );
-	material[2].map = loader.load( '/assets/cube3.png' );
-	//material[3].map = loader.load( '/assets/cube0.png' );
-	material[4].map = loader.load( '/assets/cube4.png' );
-	material[5].map = loader.load( '/assets/cube5.png' );
+	material[0].map = loader.load( '../assets/cube1.png' );
+	material[1].map = loader.load( '../assets/cube2.png' );
+	material[2].map = loader.load( '../assets/cube3.png' );
+	//material[3].map = loader.load( '../assets/cube0.png' );
+	material[4].map = loader.load( '../assets/cube4.png' );
+	material[5].map = loader.load( '../assets/cube5.png' );
 
 
 	const geometryPlane = new THREE.PlaneGeometry( 16, 9 );
