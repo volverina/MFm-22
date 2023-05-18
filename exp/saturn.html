@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+	<a-sky color="grey"></a-sky>
+	<a-entity animation="property: rotation; to: -70 360 0; loop: true; dur: 10000" rotation="-70 0 0">
+		<a-sphere color="blue"  radius="1"></a-sphere> <!-- 1 item == 10000 km -- >
+		<!--- https://caps.gsfc.nasa.gov/simpson/kingswood/rings/ -->
+		<!--
+			D ring radius-inner = 2.472 Saturn radii 
+			D ring radius-outer = 2.472 Saturn radii +  0.126 Saturn radii
+			C ring radius-inner = 3.054 Saturn radii 
+			C ring radius-outer = 3.054 Saturn radii +   0.288  Saturn radii
+		-->
+
+		<a-ring radius-inner="1.110" radius-outer="1.236" material="side: double" src="../assets/foxandears.png"></a-ring> <!-- D -->
+		
+		<a-ring radius-inner="1.239" radius-outer="1.527" material="side: double" src="../assets/97122.jpg"></a-ring> <!-- C -->
+
+		<a-ring radius-inner="1.527" radius-outer="1.951" material="side: double" src="../assets/canonical_face_model_uv_visualization.png"></a-ring> <!-- B -->
+
+		<a-ring radius-inner="2.027" radius-outer="2.269" material="side: double" src="../assets/zolotnizky.jpg"></a-ring> <!-- A -->
+		<a-ring radius-inner="2.326" radius-outer="2.326" material="side: double" src="../assets/mymask.png"></a-ring> <!-- F -->
+		<a-ring radius-inner="2.82" radius-outer="2.90" material="side: double" src="../assets/semerikov.png"></a-ring> <!-- G -->
+		<a-ring radius-inner="3" radius-outer="8" material="side: double" src="../assets/mockimage.png" segments-theta=128></a-ring> <!-- E -->
+
+
+
+	</a-entity>
+
+	<a-camera position="0 0 10" ></a-camera>
+    </a-scene>
+  </body>
+</html>
