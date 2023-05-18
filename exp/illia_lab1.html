@@ -1,0 +1,36 @@
+<html>
+	<head>
+		<title>
+			Лабораторна робота № 1
+		</title>
+		<script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+	</head>
+	<body>
+		<a-scene>
+			<a-sky color="#777777"></a-sky>
+			<a-entity rotation="-70 -45 0">
+				<a-plane width=10 height=0.5 position="0 0 0"></a-plane>
+				<a-sphere color="red" radius=0.1 position="-5 3 0"
+	animation="property: position; to: -5 0.1 0; dur: 1000; easing: linear; loop: false" 
+
+	animation__2="delay: 1000; property: position; from: -5 0.1 0; to: -4 1 0; dur: 1000; easing: linear; loop: false" 
+	animation__3="delay: 2000; property: position; from: -4 1 0; to: -3 0.1 0; dur: 1000; easing: linear; loop: false" 
+
+	animation__4="delay: 3000; property: position; from: -3 0.1 0; to: -2 1 0; dur: 1000; easing: linear; loop: false" 
+	animation__5="delay: 4000; property: position; from: -2 1 0; to: -1 0.1 0; dur: 1000; easing: linear; loop: false" 
+
+	animation__6="delay: 5000; property: position; from: -1 0.1 0; to: 0 1 0; dur: 1000; easing: linear; loop: false" 
+	animation__7="delay: 6000; property: position; from: 0 1 0; to: 1 0.1 0; dur: 1000; easing: linear; loop: false" 
+
+	animation__8="delay: 7000; property: position; from: 1 0.1 0; to: 2 1 0; dur: 1000; easing: linear; loop: false" 
+	animation__9="delay: 8000; property: position; from: 2 1 0; to: 3 0.1 0; dur: 1000; easing: linear; loop: false" 
+
+	animation__10="delay: 9000; property: position; from: 3 0.1 0; to: 4 1 0; dur: 1000; easing: linear; loop: false" 
+	animation__11="delay: 10000; property: position; from: 4 1 0; to: 5 0.1 0; dur: 1000; easing: linear; loop: false" 
+
+				></a-sphere>
+			</a-entity>
+			<a-camera position="-5 2 7" animation="property: position; to: 5 2 7; dur: 10000; easing: linear; loop: false" rotation="-70 -45 0"></a-camera>
+		</a-scene>
+	</body>
+</html>
